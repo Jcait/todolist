@@ -42,15 +42,19 @@ input {
     margin: 2%;
 }
 
-li {
+ul, li {
+    padding-left: 2%;
     list-style: none;
+    width: 70%;
 }
 
-li > input {
+
+ul > input {
     border-bottom: none;
     font-size: 1rem;
     margin: 0;
     text-align: left;
+    width: 90%;
 }
 
 .sub-task {
@@ -81,4 +85,32 @@ li > input {
     margin: 4%;
     display: flex;
     align-items: center;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sub-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sub-task.text {
+    background-color: var(--glaucous);
+    text-align: left;
+    font-size: .8rem;
+}
+
+.card-title {
+    width: 50%;
+}
+
+.new-task-btn {
+    padding: 6%;
+    background-color: var(--platinum);
+    margin-top: 5%;
 }

@@ -10,7 +10,17 @@ export default function card(content) {
     content.appendChild(newCard)
     newCard.appendChild(cardTop)
     cardTitle(cardTop, "Card Title")
-    cardList(newCard)
+    cardList(newCard)    
+    cardTop.appendChild(newTaskButton(newCard))
  }
 
- 
+const newTaskButton = (newCard) => {
+    const btn = document.createElement("btn")
+    btn.innerText = "New Task"
+    btn.classList.add("new-task-btn")
+    btn.addEventListener("click", () => {
+        cardList(newCard)
+        
+    })
+    return btn
+}
