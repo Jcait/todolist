@@ -1,0 +1,38 @@
+/* CSS HEX */
+/* --rich-black: #04080fff;
+--glaucous: #507dbcff;
+--powder-blue: #a1c6eaff;
+--columbia-blue: #bbd1eaff;
+--platinum: #dae3e5ff; */
+
+:root{
+    --rich-black: #04080fff;
+--glaucous: #507dbcff;
+--powder-blue: #a1c6eaff;
+--columbia-blue: #bbd1eaff;
+--platinum: #dae3e5ff;
+
+}
+
+body {
+    margin: 0;
+    background-color: var(--columbia-blue);
+    color: var(--rich-black);
+}
+nav {
+    background-color: var(--platinum);
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.content {
+    display: flex;
+}
+
+.test {
+    background-color: var(--powder-blue);
+}
+
