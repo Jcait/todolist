@@ -1,8 +1,4 @@
-import newTask from "./newTask";
 import "./style.css";
+import webPage from "./webpage";
 
-const list = document.querySelector(".list");
-
-list.appendChild(newTask());
-
-console.log("test");
+webPage();
