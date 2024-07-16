@@ -1,5 +1,7 @@
 import newSubTask from "./newSubTask"
 
+
+
 export default function newBtn() {
     const btn = document.createElement("button")
     btn.innerText = "Add sub-task"
@@ -7,6 +9,7 @@ export default function newBtn() {
     btn.addEventListener("click", () => {
         const test = btn.parentNode.firstChild
         newSubTask(test)
+
 
     })
     return btn
