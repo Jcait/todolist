@@ -22,6 +22,13 @@ const addBtns = (div) => {
   }
 };
 
+const delBtn = (btn) => {
+  const delList = btn.parentNode;
+  btn.addEventListener("click", () => {
+    console.log(delList);
+  });
+};
+
 const completeBtn = (btn) => {
   btn.addEventListener("click", () => {
     // const cardList = btn.parentNode.parentNode.parentNode.firstChild.firstChild;
