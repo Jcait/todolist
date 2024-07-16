@@ -17,21 +17,35 @@ const addBtns = (div) => {
     } else {
       btn.classList.add("delete-button");
       btn.innerText = "Delete Task";
+      delBtn(btn);
     }
     div.appendChild(btn);
   }
 };
 
 const delBtn = (btn) => {
-  const delList = btn.parentNode;
   btn.addEventListener("click", () => {
-    console.log(delList);
+    const delList = btn.parentNode.parentNode;
+    console.log("click");
+    const ans = prompt("Are you sure you want to delete this task?");
+    switch (ans.toLowerCase()) {
+      case "yes":
+        console.log("yes detected");
+        console.log(ans);
+        delList.remove();
+        break;
+      case "no":
+        console.log(ans);
+        break;
+      default:
+        console.log(ans);
+        return;
+    }
   });
 };
 
 const completeBtn = (btn) => {
   btn.addEventListener("click", () => {
-    // const cardList = btn.parentNode.parentNode.parentNode.firstChild.firstChild;
     const title = btn.parentNode.parentNode.querySelector("input");
     const text =
       btn.parentNode.parentNode.parentNode.querySelectorAll(".sub-task.text");
