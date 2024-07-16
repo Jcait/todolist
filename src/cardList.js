@@ -11,8 +11,12 @@ export default function cardList(card){
  }
 
  const listContent = (card, div) => {
+   const subDiv = divAdd()
     const list = document.createElement("ul")
-    div.appendChild(list)
+    subDiv.classList = "list-contents"
+    div.appendChild(subDiv)
+
+    subDiv.appendChild(list)
     card.appendChild(div)
     cardTitle(list, "New Task")
     div.appendChild(newBtn())
