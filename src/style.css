@@ -118,3 +118,8 @@ ul > input {
 .subtask-done {
     text-decoration: line-through;
 }
+
+.list-content {
+    display: flex;
+    align-items: baseline;
+}

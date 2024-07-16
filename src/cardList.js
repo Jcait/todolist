@@ -6,14 +6,19 @@ import newBtn from "./newBtn"
 
 export default function cardList(card){
     const div = divAdd()
+    const subDiv = divAdd()
     div.classList.add("card-list")
     listContent(card, div)
+    div.appendChild(subDiv)
+    card.appendChild(div)
  }
 
  const listContent = (card, div) => {
     const list = document.createElement("ul")
-    div.appendChild(list)
-    card.appendChild(div)
+    const subDiv = divAdd()
+    subDiv.classList.add("list-content")
+    div.appendChild(subDiv)
+    subDiv.appendChild(list)
     list.appendChild(cardTitle("New Task"))
-    div.appendChild(newBtn())
+    subDiv.appendChild(newBtn())
  }
