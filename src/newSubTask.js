@@ -18,9 +18,11 @@ const checkbox = () => {
     newCheckbox.addEventListener("change", () => {
         const taskText = newCheckbox.parentNode.childNodes[1]
         if(newCheckbox.checked == true) {
-            console.log("checkbox has been checked")
+            // console.log("checkbox has been checked")
+            taskText.classList.add("subtask-done")
         } else {
-            console.log("checkbox has not been checked")
+            // console.log("checkbox has not been checked")
+            taskText.classList.remove("subtask-done")
         }
 
     })
