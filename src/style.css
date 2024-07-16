@@ -23,10 +23,28 @@ body {
 }
 
 .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav {
   display: flex;
   background-color: var(--tiffany-blue);
   width: 90%;
   margin-top: 2.5%;
+}
+.content {
+  background-color: var(--verdigris);
+}
+
+.side-bar {
+  background-color: var(--verdigris-2);
+}
+
+.list {
+  background-color: var(--verdigris-3);
 }
 
 /* Photo by <a href="https://unsplash.com/@retrosupply?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">RetroSupply</a> on <a href="https://unsplash.com/photos/vintage-teal-typewriter-beside-book-jLwVAUtLOAQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> Add this later
