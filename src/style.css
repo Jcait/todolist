@@ -37,6 +37,8 @@ body {
 }
 .content {
   background-color: var(--verdigris);
+  width: 90%;
+  display: flex;
 }
 
 .side-bar {
