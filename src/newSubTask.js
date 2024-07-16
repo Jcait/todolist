@@ -15,10 +15,14 @@ const checkbox = () => {
     const newCheckbox = document.createElement("input")
     newCheckbox.type = "checkbox"
     newCheckbox.classList.add("checkbox")
-    newCheckbox.addEventListener("click", () => {
-        console.log("CLicked")
-        console.log(newCheckbox.parentNode.childNodes[1])
-        newCheckbox.parentNode.childNodes[1].classList.add("subtask-done")
+    newCheckbox.addEventListener("change", () => {
+        const taskText = newCheckbox.parentNode.childNodes[1]
+        if(newCheckbox.checked == true) {
+            console.log("checkbox has been checked")
+        } else {
+            console.log("checkbox has not been checked")
+        }
+
     })
     return newCheckbox
 }
