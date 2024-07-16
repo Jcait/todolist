@@ -9,7 +9,7 @@ export default function card(content) {
     cardTop.classList.add("card-top")
     content.appendChild(newCard)
     newCard.appendChild(cardTop)
-    newCard.appendChild(cardTitle("New Task"))
+    cardTop.appendChild(cardTitle("New Task"))
     cardList(newCard)    
     cardTop.appendChild(newTaskButton(newCard))
  }

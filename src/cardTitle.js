@@ -1,4 +1,4 @@
-export default function cardTitle(, text)  {
+export default function cardTitle(text)  {
     const cardHeader = document.createElement("input")
     cardHeader.type = "text"
     cardHeader.placeholder = text
