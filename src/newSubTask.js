@@ -1,15 +1,14 @@
-export default function newSubTask(dom) {
-    const div = document.createElement("div")
+import divAdd from "./divAdd"
 
-    const subText = document.createElement("input")
+export default function newSubTask() {
+    const div = divAdd()
+
     div.classList.add("sub-list")
-    // subText.type = "text"
-    // subText.classList.add("sub-task", "text")
-    // subText.placeholder = "New Sub Task"
-    dom.appendChild(div)
+
     div.appendChild(checkbox())
-    // div.appendChild(subText)
-    // console.log("CLICK")  
+    div.appendChild(subTaskText())
+    return div
+
 }
 
 const checkbox = () => {
@@ -18,7 +17,16 @@ const checkbox = () => {
     newCheckbox.classList.add("checkbox")
     newCheckbox.addEventListener("click", () => {
         console.log("CLicked")
+        console.log(newCheckbox.parentNode.childNodes[1])
+        newCheckbox.parentNode.childNodes[1].classList.add("subtask-done")
     })
     return newCheckbox
 }
 
+const subTaskText = () => {
+    const subText = document.createElement("input")
+    subText.type = "text"
+    subText.classList.add("sub-task", "text")
+    subText.placeholder = "New Sub Task"
+    return subText
+}

@@ -114,3 +114,7 @@ ul > input {
     background-color: var(--platinum);
     margin-top: 5%;
 }
+
+.subtask-done {
+    text-decoration: line-through;
+}

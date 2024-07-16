@@ -7,8 +7,8 @@ export default function newBtn() {
     btn.innerText = "Add sub-task"
     btn.classList.add("sub-task")
     btn.addEventListener("click", () => {
-        const test = btn.parentNode.firstChild
-        newSubTask(test)
+    const test = btn.parentNode.firstChild
+        test.appendChild(newSubTask())
 
 
     })
