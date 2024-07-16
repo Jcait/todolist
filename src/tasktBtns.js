@@ -24,13 +24,18 @@ const addBtns = (div) => {
 
 const completeBtn = (btn) => {
   btn.addEventListener("click", () => {
-    const cardList = btn.parentNode.parentNode.parentNode.firstChild.firstChild;
+    // const cardList = btn.parentNode.parentNode.parentNode.firstChild.firstChild;
+    const title = btn.parentNode.parentNode.querySelector("input");
     const text =
       btn.parentNode.parentNode.parentNode.querySelectorAll(".sub-task.text");
-    cardList.classList.add("subtask-done");
-    console.log(text);
+    const checkbox =
+      btn.parentNode.parentNode.parentNode.querySelectorAll(".checkbox");
+    console.log(title);
     if (text.length > 0) {
       console.log("The list has items");
+      text.forEach((input) => input.classList.add("subtask-done"));
+      checkbox.forEach((input) => (input.checked = true));
+      title.classList.add("subtask-done");
     } else {
       console.log("The LIst doesn't have items");
     }
