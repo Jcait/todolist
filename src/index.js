@@ -1,7 +1,8 @@
-import "./style.css"
-import card from "./card"
+import "./style.css";
+import card from "./card";
 
 // DOM Selectors
-const content = document.querySelector(".content")
+const content = document.querySelector(".content");
 
-card(content)  
+card(content);
+card(content);

@@ -85,6 +85,7 @@ ul > input {
     margin: 4%;
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 .card-top {
