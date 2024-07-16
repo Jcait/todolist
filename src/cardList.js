@@ -18,6 +18,6 @@ export default function cardList(card){
 
     subDiv.appendChild(list)
     card.appendChild(div)
-    cardTitle(list, "New Task")
+    list.appendChild("New Task")
     div.appendChild(newBtn())
  }
