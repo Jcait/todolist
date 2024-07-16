@@ -9,6 +9,15 @@ export default function webPage() {
 
 const addBtn = (sideBtn) => {
   const btn = document.createElement("button");
-  sideBtn.appendChild(btn);
   btn.innerText = "New Project";
+  btnListen(btn);
+  sideBtn.appendChild(btn);
+};
+
+const btnListen = (btn) => {
+  const list = document.querySelector(".list");
+  btn.addEventListener("click", () => {
+    console.log("clicked");
+    list.appendChild(newTask());
+  });
 };
