@@ -15,7 +15,16 @@ export default function newTask() {
 const addSub = () => {
   const div = document.createElement("div");
   const subTask = document.createElement("input");
+  subTask.placeholder = "Task name";
   div.classList.add("subTask");
   div.appendChild(subTask);
+  div.appendChild(subBtn());
   return div;
+};
+
+const subBtn = () => {
+  const btn = document.createElement("button");
+  btn.classList.add("taskComplete");
+  btn.innerText = "✔";
+  return btn;
 };
