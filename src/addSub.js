@@ -5,6 +5,7 @@ export default function addSub() {
   const subDiv = document.createElement("div");
   const buttons = document.createElement("div");
   const subTask = document.createElement("input");
+  const subDate = document.createElement("input");
   subDiv.classList.add("task-list");
   subTask.placeholder = "Task name";
   div.classList.add("subTask");
@@ -12,6 +13,9 @@ export default function addSub() {
   div.appendChild(subDiv);
   div.appendChild(buttons);
   buttons.appendChild(subTask);
+  subDate.type = "date";
+  subDate.id = "duedate";
+  buttons.appendChild(subDate);
   buttons.appendChild(subBtn());
   return div;
 }
