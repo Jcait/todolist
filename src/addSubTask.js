@@ -16,7 +16,7 @@ export default function addSubTask(text, date) {
 }
 
 const addDue = (date) => {
-  let newDate = format(new Date(date), "do LLLL");
+  let newDate = format(new Date(date), "do MMMM y");
   const p = document.createElement("p");
   p.innerText = `Task Due: ${newDate}`;
   return p;
