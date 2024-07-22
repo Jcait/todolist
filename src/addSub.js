@@ -8,6 +8,7 @@ export default function addSub() {
   subDiv.classList.add("task-list");
   subTask.placeholder = "Task name";
   div.classList.add("subTask");
+  buttons.classList.add("buttons");
   div.appendChild(subDiv);
   div.appendChild(buttons);
   buttons.appendChild(subTask);

@@ -7,6 +7,12 @@ export default function addSubTask(text) {
     div.classList.add("subTask-item");
     task.innerText = text;
     div.appendChild(task);
+    div.appendChild(taskBtns());
     return div;
   }
 }
+
+const taskBtns = () => {
+  const btn = document.createElement("button");
+  return btn;
+};
