@@ -7,10 +7,17 @@ export default function subBtn() {
 }
 
 const subListen = (btn) => {
+  const subTask = btn.parentNode;
   btn.addEventListener("click", () => {
-    const test = document.createElement("h1");
-    console.log("clicked");
-    test.innerText = "TEST WORKS";
-    btn.parentNode.firstChild.appendChild(test);
+    const subTask = btn.parentNode;
+    console.log(subTask.querySelector("input").value);
+    subTask.querySelector("input").value = "";
+    btn.parentNode.firstChild.appendChild(addSub());
   });
+};
+
+const addSub = () => {
+  const div = document.createElement("div");
+  div.classList.add("subTask-item");
+  return div;
 };
