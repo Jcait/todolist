@@ -1,14 +1,4 @@
-import subListen from "./subListen";
-
-export default function subBtn() {
-  const btn = document.createElement("button");
-  btn.classList.add("taskComplete");
-  btn.innerText = "+";
-  subListen(btn);
-  return btn;
-}
-
-const addSub = (text) => {
+export default function addSubTask(text) {
   if (text.trim() == "") {
     return;
   } else {
@@ -19,4 +9,4 @@ const addSub = (text) => {
     div.appendChild(task);
     return div;
   }
-};
+}
