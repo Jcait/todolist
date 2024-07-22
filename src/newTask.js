@@ -1,5 +1,6 @@
 // Adds the whole thing to the DOM
 
+import taskDesc from "./taskDesc";
 import taskHeader from "./taskheader";
 
 export default function newTask() {
@@ -9,10 +10,3 @@ export default function newTask() {
   div.appendChild(taskDesc());
   return div;
 }
-
-const taskDesc = () => {
-  const p = document.createElement("textarea");
-  p.innerText = "Project Description";
-  p.classList.add("task-desc");
-  return p;
-};
