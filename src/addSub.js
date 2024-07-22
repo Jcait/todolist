@@ -1,9 +1,10 @@
+import divAdd from "./divAdd";
 import subBtn from "./subBtn";
 
 export default function addSub() {
-  const div = document.createElement("div");
-  const subDiv = document.createElement("div");
-  const buttons = document.createElement("div");
+  const div = divAdd();
+  const subDiv = divAdd();
+  const buttons = divAdd();
   const subTask = document.createElement("input");
   const subDate = document.createElement("input");
   subDiv.classList.add("task-list");
