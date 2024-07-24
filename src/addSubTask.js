@@ -1,4 +1,5 @@
 import { compareAsc, format } from "date-fns";
+import { te } from "date-fns/locale";
 
 export default function addSubTask(text, date) {
   if (text.trim() == "" && date != " ") {
@@ -29,10 +30,28 @@ const checkBtns = (div) => {
     if (i == 0) {
       btn.classList.add("subtask-complete");
       btn.innerText = "✓";
+      completeBtn(btn);
     } else {
       btn.classList.add("subtask-delete");
       btn.innerText = "X";
+      deleteBtn(btn);
     }
     div.appendChild(btn);
   }
+};
+
+const completeBtn = (btn) => {
+  btn.addEventListener("click", () => {
+    let taskList = btn.parentNode.querySelectorAll("p");
+    taskList.forEach((task) => {
+      task.classList.toggle("checked");
+    });
+  });
+};
+
+const deleteBtn = (btn) => {
+  btn.addEventListener("click", () => {
+    let taskList = btn.parentNode;
+    taskList.remove();
+  });
 };

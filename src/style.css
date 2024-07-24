@@ -21,6 +21,21 @@ body {
   box-sizing: border-box;
 }
 
+.buttons {
+  display: flex;
+  gap: 5%;
+}
+
+.buttons > input {
+  appearance: none;
+  border: none;
+  outline: none;
+  border-bottom: 0.2em solid var(--verdigris-3);
+  background: rgba(var(--verdigris-3), 0.2);
+  border-radius: 0.2em 0.2em 0 0;
+  padding: 0.4em;
+  color: #000;
+}
 .container {
   width: 100%;
   height: 100vh;
@@ -94,6 +109,10 @@ body {
 .subTask > button {
   padding: 2.5%;
   width: 20%;
+}
+
+p.checked {
+  text-decoration: line-through;
 }
 
 /* Photo by <a href="https://unsplash.com/@retrosupply?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">RetroSupply</a> on <a href="https://unsplash.com/photos/vintage-teal-typewriter-beside-book-jLwVAUtLOAQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> Add this later
