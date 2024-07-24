@@ -11,6 +11,7 @@ export default function addSubTask(text, date) {
     task.innerText = text;
     div.appendChild(task);
     div.appendChild(addDue(date));
+    checkBtns(div);
     return div;
   }
 }
@@ -20,4 +21,18 @@ const addDue = (date) => {
   const p = document.createElement("p");
   p.innerText = `Task Due: ${newDate}`;
   return p;
+};
+
+const checkBtns = (div) => {
+  for (let i = 0; i < 2; i++) {
+    const btn = document.createElement("button");
+    if (i == 0) {
+      btn.classList.add("subtask-complete");
+      btn.innerText = "✓";
+    } else {
+      btn.classList.add("subtask-delete");
+      btn.innerText = "X";
+    }
+    div.appendChild(btn);
+  }
 };
