@@ -46,7 +46,8 @@ const checkBtns = (div) => {
 
 const completeBtn = (btn) => {
   btn.addEventListener("click", () => {
-    let taskList = btn.parentNode.querySelectorAll("p");
+    let taskList = btn.parentNode.parentNode.querySelectorAll("p");
+    console.log(taskList);
     taskList.forEach((task) => {
       task.classList.toggle("checked");
     });
@@ -55,7 +56,7 @@ const completeBtn = (btn) => {
 
 const deleteBtn = (btn) => {
   btn.addEventListener("click", () => {
-    let taskList = btn.parentNode;
+    let taskList = btn.parentNode.parentNode;
     taskList.remove();
   });
 };
