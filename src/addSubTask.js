@@ -1,5 +1,6 @@
 import { compareAsc, format } from "date-fns";
 import { te } from "date-fns/locale";
+import divAdd from "./divAdd";
 
 export default function addSubTask(text, date) {
   if (text.trim() == "" && date != " ") {
@@ -7,12 +8,15 @@ export default function addSubTask(text, date) {
   } else {
     console.log(date);
     const div = document.createElement("div");
+    const subTaskBtns = divAdd();
     const task = document.createElement("p");
     div.classList.add("subTask-item");
+    subTaskBtns.classList.add("subTask-buttons");
     task.innerText = text;
     div.appendChild(task);
     div.appendChild(addDue(date));
-    checkBtns(div);
+    div.appendChild(subTaskBtns);
+    checkBtns(subTaskBtns);
     return div;
   }
 }
