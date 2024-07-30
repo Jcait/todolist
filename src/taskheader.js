@@ -1,5 +1,5 @@
 export default function taskHeader() {
   const header = document.createElement("h3");
-  header.innerText = "NEW TASK";
+  header.innerText = document.getElementById("projectName").value;
   return header;
 }
